@@ -1,7 +1,7 @@
 const products = [
-  { id: 1, name: "Smartphone", price: 1200, img: "https://via.placeholder.com/100?text=Smartphone" },
-  { id: 2, name: "Notebook", price: 3500, img: "https://via.placeholder.com/100?text=Notebook" },
-  { id: 3, name: "Fone de Ouvido", price: 150, img: "https://via.placeholder.com/100?text=Fone" },
+  { id: 1, name: "Smartphone", price: 1200, img: "lg-k50s-smartphones-1200-reais.jpg" },
+  { id: 2, name: "Notebook", price: 3500, img: "Notebook.jpg" },
+  { id: 3, name: "Fone de Ouvido", price: 150, img: "fone.jpg" },
   { id: 4, name: "TV 50''", price: 2500, img: "https://via.placeholder.com/100?text=TV" },
   { id: 5, name: "Cafeteira", price: 200, img: "https://via.placeholder.com/100?text=Cafeteira" }
 ];
