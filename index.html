@@ -1,19 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Amerazon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <img src="https://img.icons8.com/color/48/000000/amazon.png" alt="Logo" style="height:48px; margin-right:12px;">
     <h1>Amerazon</h1>
     <input type="text" id="search" placeholder="Buscar produto...">
     <button onclick="showCart()">🛒 Carrinho (<span id="cart-count">0</span>)</button>
   </header>
+
+  <!-- Banner Promocional -->
+  <section class="banner">
+    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=1200&q=80" alt="Promoção" />
+    <div class="banner-text">
+      <h2>Super Ofertas de Outubro!</h2>
+      <p>Descontos incríveis em eletrônicos, informática e muito mais.</p>
+    </div>
+  </section>
+
   <main>
+    <!-- Categorias -->
+    <nav class="categories">
+      <button onclick="filterCategory('')">Todos</button>
+      <button onclick="filterCategory('Smartphone')">Smartphones</button>
+      <button onclick="filterCategory('Notebook')">Notebooks</button>
+      <button onclick="filterCategory('TV')">TVs</button>
+      <button onclick="filterCategory('Cafeteira')">Cafeteiras</button>
+      <button onclick="filterCategory('Tablet')">Tablets</button>
+      <button onclick="filterCategory('Impressora')">Impressoras</button>
+      <button onclick="filterCategory('Mouse')">Mouses</button>
+      <button onclick="filterCategory('Teclado')">Teclados</button>
+      <button onclick="filterCategory('Monitor')">Monitores</button>
+    </nav>
     <div id="products"></div>
   </main>
+
   <div id="cart-modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeCart()">&times;</span>
@@ -23,6 +50,24 @@
       <button onclick="checkout()">Finalizar Compra</button>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Amerazon. Todos os direitos reservados.</p>
+      <p>
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Contato</a>
+      </p>
+    </div>
+  </footer>
+
   <script src="app.js"></script>
+  <script>
+    // Filtro por categoria
+    function filterCategory(cat) {
+      document.getElementById('search').value = cat;
+      renderProducts(cat);
+    }
+  </script>
 </body>
 </html>
