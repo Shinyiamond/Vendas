@@ -3,7 +3,12 @@ const products = [
   { id: 2, name: "Notebook", price: 3500, img: "Notebook.jpg" },
   { id: 3, name: "Fone de Ouvido", price: 150, img: "fone.jpg" },
   { id: 4, name: "TV 50''", price: 2500, img: "https://via.placeholder.com/100?text=TV" },
-  { id: 5, name: "Cafeteira", price: 200, img: "https://via.placeholder.com/100?text=Cafeteira" }
+  { id: 5, name: "Cafeteira", price: 200, img: "https://via.placeholder.com/100?text=Cafeteira" },
+  { id: 6, name: "Tablet", price: 950, img: "https://via.placeholder.com/100?text=Tablet" },
+  { id: 7, name: "Impressora", price: 600, img: "https://via.placeholder.com/100?text=Impressora" },
+  { id: 8, name: "Mouse Gamer", price: 120, img: "https://via.placeholder.com/100?text=Mouse+Gamer" },
+  { id: 9, name: "Teclado Mecânico", price: 280, img: "https://via.placeholder.com/100?text=Teclado" },
+  { id: 10, name: "Monitor 24''", price: 1125, img: "https://via.placeholder.com/100?text=Monitor" }
 ];
 
 let cart = [];
