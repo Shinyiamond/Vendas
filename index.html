@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
     <img src="https://img.icons8.com/color/48/000000/amazon.png" alt="Logo" style="height:48px; margin-right:12px;">
     <h1>Amerazon</h1>
@@ -17,13 +17,14 @@
 
   <!-- Banner Promocional -->
   <section class="banner">
-    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=1200&q=80" alt="Promoção" />
+    <img src="banner.jpg" alt="Promoção">
     <div class="banner-text">
-      <h2>Super Ofertas de Outubro!</h2>
+      <h2>💥 Super Ofertas de Outubro!</h2>
       <p>Descontos incríveis em eletrônicos, informática e muito mais.</p>
     </div>
   </section>
 
+  <!-- Conteúdo Principal -->
   <main>
     <!-- Categorias -->
     <nav class="categories">
@@ -38,19 +39,23 @@
       <button onclick="filterCategory('Teclado')">Teclados</button>
       <button onclick="filterCategory('Monitor')">Monitores</button>
     </nav>
+
+    <!-- Lista de produtos -->
     <div id="products"></div>
   </main>
 
+  <!-- Modal do Carrinho -->
   <div id="cart-modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeCart()">&times;</span>
-      <h2>Carrinho</h2>
+      <h2>🛍️ Seu Carrinho</h2>
       <ul id="cart-items"></ul>
       <p>Total: R$ <span id="cart-total">0.00</span></p>
       <button onclick="checkout()">Finalizar Compra</button>
     </div>
   </div>
 
+  <!-- Rodapé -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Amerazon. Todos os direitos reservados.</p>
@@ -61,12 +66,19 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="app.js"></script>
   <script>
     // Filtro por categoria
     function filterCategory(cat) {
       document.getElementById('search').value = cat;
       renderProducts(cat);
+
+      // Atualiza o botão ativo
+      const buttons = document.querySelectorAll('.categories button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      const activeBtn = Array.from(buttons).find(b => b.textContent.includes(cat));
+      if (activeBtn) activeBtn.classList.add('active');
     }
   </script>
 </body>
